@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './ButtonDropdown.scss'
 
 ButtonDropdown.propTypes = {
   disabled: PropTypes.bool,
@@ -11,11 +12,10 @@ ButtonDropdown.propTypes = {
 };
 
 function ButtonDropdown(props) {
-  console.log(props);
   const { toggle, isOpen } = props;
   return (
     <React.Fragment>
-      <div className='ButtonDropdown' onClick={toggle}>
+      <div className='button-dropdown' onClick={toggle}>
         {isOpen ? props.children : props.children[0]}
       </div>
     </React.Fragment>

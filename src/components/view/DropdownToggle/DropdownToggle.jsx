@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import './DropdownToggle.scss';
 
 DropdownToggle.propTypes = {
   caret: PropTypes.bool,
@@ -18,16 +19,17 @@ function DropdownToggle(props) {
       setClicked(true);
     } else {
       setClicked(false);
-      console.log('khong vao');
     }
   };
   return (
     <React.Fragment>
       <button
-        style={{ backgroundColor: `${color}` }}
+        className='dropdown-toggle'
         onClick={(e) => checkClick(e)}
         style={
-          clicked ? { border: '1px solid black' } : { backgroundColor: 'none' }
+          clicked
+            ? { border: '1px solid #DBE0E6' }
+            : { backgroundColor: 'none' }
         }
       >
         {props.children}

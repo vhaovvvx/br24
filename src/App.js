@@ -1,31 +1,14 @@
-import { useState } from 'react';
 import './App.css';
-import { ArrowDown } from './components/font-icons/icons/Icon';
-import ButtonDropdown from './components/view/ButtonDropdown/ButtonDropdown';
-import DropdownItem from './components/view/DropdownItem/DropdownItem';
-import DropdownMenu from './components/view/DropdownMenu/DropdownMenu';
-import DropdownToggle from './components/view/DropdownToggle/DropdownToggle';
+import DropdownGroup from './components/view/ButtonDropdownGroup/DropdownGroup';
 
 function App() {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-
-  const toggle = () => setDropdownOpen(!dropdownOpen);
-
   return (
     <div className='App'>
-      <ButtonDropdown isOpen={dropdownOpen} toggle={toggle}>
-        <DropdownToggle color='red'>
-          ssss
-          <ArrowDown size='16px'></ArrowDown>
-        </DropdownToggle>
-        <DropdownMenu>
-          <DropdownItem>1</DropdownItem>
-          <DropdownItem>2</DropdownItem>
-          <DropdownItem>3</DropdownItem>
-          <DropdownItem>4</DropdownItem>
-          <DropdownItem>5</DropdownItem>
-        </DropdownMenu>
-      </ButtonDropdown>
+      <DropdownGroup
+        title='xin game'
+        sizeIcon='16px'
+        dataClick={[1, 2, 3, 4, 5]}
+      ></DropdownGroup>
     </div>
   );
 }
