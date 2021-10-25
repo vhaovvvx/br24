@@ -155,6 +155,7 @@ summary {
   --Rhodomyrtus: #2e3a5b;
   --Galic: #f4f5f6;
   --Jicama: #dbe0e6;
+  --Berry: #2875ea;
 }
 
 .fas .fa-arrow-down {
@@ -164,4 +165,6 @@ summary {
 .icon-dropdown {
   position: absolute;
   right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
 }
