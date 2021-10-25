@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import { ArrowDown } from './components/font-icons/icons/AngryRegular';
+import { ArrowDown } from './components/font-icons/icons/Icon';
 import ButtonDropdown from './components/view/ButtonDropdown/ButtonDropdown';
 import DropdownItem from './components/view/DropdownItem/DropdownItem';
 import DropdownMenu from './components/view/DropdownMenu/DropdownMenu';
@@ -16,7 +16,7 @@ function App() {
       <ButtonDropdown isOpen={dropdownOpen} toggle={toggle}>
         <DropdownToggle color='red'>
           ssss
-          <ArrowDown></ArrowDown>
+          <ArrowDown size='16px'></ArrowDown>
         </DropdownToggle>
         <DropdownMenu>
           <DropdownItem>1</DropdownItem>

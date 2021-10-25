@@ -18,7 +18,8 @@ const AngryRegular = () => {
   );
 };
 
-const ArrowDown = () => {
+const ArrowDown = (props) => {
+  const { size } = props;
   return (
     <svg
       aria-hidden='true'
@@ -29,6 +30,7 @@ const ArrowDown = () => {
       role='img'
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 448 512'
+      height={size}
     >
       <path
         fill='currentColor'
