@@ -1,0 +1,109 @@
+.input-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 256px;
+  position: relative;
+
+  margin: 50px;
+}
+
+.input-container:focus-within > .label {
+  transform: translate(0, 4px) scale(0.8);
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 16px;
+  font-family: Robobto;
+  font-weight: 500px;
+}
+
+.input-container:focus-within > .errorLabel {
+  transform: translate(0, 18px) scale(0.8);
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 16px;
+  font-family: Robobto;
+  font-weight: 500px;
+}
+
+// .input-container .filled , .input-container:focus-within > label{
+//   transform: translate(0, 4px) scale(0.8);
+//   text-transform: uppercase;
+//   font-size: 11px;
+//   line-height: 16px;
+//   font-family: Robobto;
+//   font-weight: 500px;
+// }
+
+.input-container > .label {
+  position: absolute;
+  pointer-events: none;
+  transform: translate(0, 21px) scale(1);
+  transform-origin: top left;
+  transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  color: #6f81a5;
+  font-size: 16px;
+  line-height: 1;
+  left: 16px;
+}
+
+.input-container > .errorLabel {
+  position: absolute;
+  pointer-events: none;
+  transform: translate(0, 35px) scale(1);
+  transform-origin: top left;
+  transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  color: #6f81a5;
+  font-size: 16px;
+  line-height: 1;
+  left: 16px;
+}
+
+.input-container input {
+  height: 56px;
+  border-radius: 4px;
+  border: 1px solid #DBE0E6;
+  padding: 16px;
+  font-size: 17px;
+  line-height: 24px;
+  outline: none;
+  transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  box-shadow: 0px 1px 3px rgba(46, 58, 91, 0.08);
+}
+
+.input-container input:hover {
+  border: 1px solid #8592AB;
+}
+
+.input-container input:disabled {
+  background: #F4F5F6;
+  border: 1px solid #DBE0E6;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+
+.input-container input:focus {
+  border: 1px solid #8592AB;
+  padding: 24px 16px 8px 16px;
+}
+
+.error, .vip-error {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  letter-spacing: 0.024em;
+  color: #D54C48;
+  text-indent: 16px;
+}
+
+.vip-error {
+  position: absolute;
+  right: 16px;
+  top: 36px;
+}

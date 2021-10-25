@@ -1,5 +1,5 @@
 import React from 'react';
-import './OutLineButton.css';
+import './OutLineButton.scss';
 
 function OutLineButton(props) {
 
