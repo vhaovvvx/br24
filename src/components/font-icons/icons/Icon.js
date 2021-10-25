@@ -24,22 +24,90 @@ const ArrowDown = (props) => {
   const { size } = props;
   return (
     <svg
-      aria-hidden='true'
-      focusable='false'
-      data-prefix='fas'
-      data-icon='arrow-down'
-      className='svg-inline--fa fa-arrow-down fa-w-14'
-      role='img'
+      width='8'
+      height='4'
+      viewBox='0 0 8 4'
+      fill='none'
       xmlns='http://www.w3.org/2000/svg'
-      viewBox='0 0 448 512'
-      height={size}
     >
-      <path
-        fill='currentColor'
-        d='M413.1 222.5l22.2 22.2c9.4 9.4 9.4 24.6 0 33.9L241 473c-9.4 9.4-24.6 9.4-33.9 0L12.7 278.6c-9.4-9.4-9.4-24.6 0-33.9l22.2-22.2c9.5-9.5 25-9.3 34.3.4L184 343.4V56c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24v287.4l114.8-120.5c9.3-9.8 24.8-10 34.3-.4z'
-      ></path>
+      <path d='M4 4L8 0H0L4 4Z' fill='#596481' />
     </svg>
   );
 };
 
-export { AngryRegular, ArrowDown };
+const CheckMark = (props) => {
+  return (
+    <svg
+      width='14'
+      height='11'
+      viewBox='0 0 14 11'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <path d='M1 5L5 9L13 1' stroke='#2875EA' stroke-width='2' />
+    </svg>
+  );
+};
+
+const RadioCheck = (props) => {
+  return (
+    <svg
+      width='30'
+      height='30'
+      viewBox='0 0 30 30'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <g filter='url(#filter0_d_7374:4753)'>
+        <rect x='3' y='2' width='24' height='24' rx='12' fill='white' />
+        <rect
+          x='7'
+          y='6'
+          width='16'
+          height='16'
+          rx='8'
+          stroke='#0D004C'
+          stroke-width='8'
+        />
+      </g>
+      <defs>
+        <filter
+          id='filter0_d_7374:4753'
+          x='0'
+          y='0'
+          width='30'
+          height='30'
+          filterUnits='userSpaceOnUse'
+          color-interpolation-filters='sRGB'
+        >
+          <feFlood flood-opacity='0' result='BackgroundImageFix' />
+          <feColorMatrix
+            in='SourceAlpha'
+            type='matrix'
+            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+            result='hardAlpha'
+          />
+          <feOffset dy='1' />
+          <feGaussianBlur stdDeviation='1.5' />
+          <feColorMatrix
+            type='matrix'
+            values='0 0 0 0 0.180392 0 0 0 0 0.227451 0 0 0 0 0.356863 0 0 0 0.08 0'
+          />
+          <feBlend
+            mode='normal'
+            in2='BackgroundImageFix'
+            result='effect1_dropShadow_7374:4753'
+          />
+          <feBlend
+            mode='normal'
+            in='SourceGraphic'
+            in2='effect1_dropShadow_7374:4753'
+            result='shape'
+          />
+        </filter>
+      </defs>
+    </svg>
+  );
+};
+
+export { AngryRegular, ArrowDown, CheckMark, RadioCheck };

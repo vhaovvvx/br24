@@ -9,6 +9,7 @@ function DropdownGroup(props) {
   const { title, sizeIcon, dataClick } = props;
   const [titleButton, setTitleButton] = useState(title);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  console.log(dropdownOpen);
 
   const toggle = () => setDropdownOpen(!dropdownOpen);
 
@@ -23,9 +24,11 @@ function DropdownGroup(props) {
           <ArrowDown size={sizeIcon}></ArrowDown>
         </div>
       </DropdownToggle>
-      <DropdownMenu>
-        <DropdownItem data={dataClick} changeItem={changeItem}></DropdownItem>
-      </DropdownMenu>
+      <div style={dropdownOpen ? { opacity: 0 } : { opacity: 1 }}>
+        <DropdownMenu>
+          <DropdownItem data={dataClick} changeItem={changeItem}></DropdownItem>
+        </DropdownMenu>
+      </div>
     </ButtonDropdown>
   );
 }
