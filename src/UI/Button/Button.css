@@ -1,0 +1,54 @@
+.button-group {
+    height: 40px;
+    border-radius: 4px;
+    width: 100%;
+    margin: 0 auto;
+    opacity: 1;
+    border: none;
+    color: white;
+    box-shadow: 0px 8px 16px rgba(46, 58, 91, 0.16);
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    justify-content: center;
+}
+
+.button-group:hover {
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+.button-group:active {
+    box-shadow: inset 0px 2px 2px rgba(46, 58, 91, 0.16);
+}
+
+.button-group > span {
+    margin: 0 8px;
+}
+
+.icons {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    position: relative;
+}
+
+.icons-content {
+    width: 16px;
+    height: 16px;
+    background: #DBE0E6;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
