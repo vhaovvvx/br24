@@ -21,42 +21,42 @@ $font-family: Roboto;
   @include typeface-regular;
   font-size: 64px;
   line-height: 80px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
 }
 
 @mixin heading_2 {
   @include typeface-regular;
   font-size: 48px;
   line-height: 64px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
 }
 
 @mixin heading_3 {
   @include typeface-regular;
   font-size: 32px;
   line-height: 40px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
 }
 
 @mixin heading_4 {
   @include typeface-medium;
   font-size: 24px;
   line-height: 40px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
 }
 
 @mixin heading_5 {
   @include typeface-medium;
   font-size: 20px;
   line-height: 28px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
 }
 
 @mixin heading_6 {
   @include typeface-NBold;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
 }
 
 //=> Sub-heading
@@ -64,7 +64,7 @@ $font-family: Roboto;
   @include typeface-medium;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: 4%;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
@@ -72,7 +72,7 @@ $font-family: Roboto;
   @include typeface-medium;
   font-size: 11px;
   line-height: 16px;
-  letter-spacing: 2.4%;
+  letter-spacing: 0.024em;
   text-transform: uppercase;
 }
 
@@ -81,14 +81,14 @@ $font-family: Roboto;
   @include typeface-regular;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
 }
 
 @mixin body_2 {
   @include typeface-regular;
   font-size: 16px;
   line-height: 20px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
 }
 
 //=> Caption
@@ -96,21 +96,21 @@ $font-family: Roboto;
   @include typeface-regular;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
 }
 
 @mixin caption_2 {
   @include typeface-regular;
   font-size: 11px;
   line-height: 16px;
-  letter-spacing: 2.4%;
+  letter-spacing: 0.024em;
 }
 
 @mixin caption_3 {
   @include typeface-medium;
   font-size: 11px;
   line-height: 16px;
-  letter-spacing: 2.4%;
+  letter-spacing: 0.024em;
 }
 
 //=> Button
@@ -118,7 +118,7 @@ $font-family: Roboto;
   @include typeface-medium;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 4%;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
@@ -126,7 +126,7 @@ $font-family: Roboto;
   @include typeface-medium;
   font-size: 14px;
   line-height: 20px;
-  letter-spacing: 4%;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
@@ -135,7 +135,7 @@ $font-family: Roboto;
   @include typeface-NBold;
   font-size: 11px;
   line-height: 16px;
-  letter-spacing: 2.4%;
+  letter-spacing: 0.024em;
   text-transform: uppercase;
 }
 
@@ -144,6 +144,6 @@ $font-family: Roboto;
   @include typeface-NBold;
   font-size: 11px;
   line-height: 16px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   text-transform: capitalize;
 }

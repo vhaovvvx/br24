@@ -4,7 +4,7 @@ import "./Input.scss";
 function Input(props) {
   const [value, setValue] = useState("");
   const [opacity, setOpacity] = useState("1");
-  const error = false
+  const error = true
 
   const { type, name, label, disabled, mw } = props;
 
@@ -48,7 +48,6 @@ function Input(props) {
         style={errorInput}
       />
       <label
-        // className={value && "filled"}
         style={{ opacity: opacity }}
         htmlFor={name}
         className={error ? 'errorLabel' : 'label'}

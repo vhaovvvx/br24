@@ -5,7 +5,7 @@ function TextArea(props) {
   const [value, setValue] = useState("");
   const [opacity, setOpacity] = useState("1");
 
-  const { name, label, mw, height } = props;
+  const { name, label, mw, h } = props;
 
   const handleChange = (e) => {
     setValue(e.target.value);
@@ -25,7 +25,7 @@ function TextArea(props) {
 
   const mwStyle = {
     maxWidth: mw,
-    height: height,
+    height: h,
   };
 
   return (
@@ -38,7 +38,6 @@ function TextArea(props) {
         onBlur={handleBlur}
       ></textarea>
       <label
-        // className={value && "filled"}
         style={{ opacity: opacity }}
         htmlFor={name}
         className="label"
