@@ -3,10 +3,10 @@ import './OutLineButton.scss';
 
 function OutLineButton(props) {
 
-  const { mw, display, order, hanldeClick, disabled }  = props
+  const { mw, display, order, hanldeClick, disabled, btnTitle }  = props
 
   const activeStyle = {
-    maxWidth: mw
+    width: mw
   }
 
   const icons = {
@@ -30,7 +30,7 @@ return (
       onClick={hanldeClick}
       >
       <div style={icons} className='ol-icons-content'></div>
-      <span>BUTTON</span>
+      <span>{btnTitle}</span>
     </button>
   </div>
   )

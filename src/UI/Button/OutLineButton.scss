@@ -1,48 +1,53 @@
+@import '../../scss//variable.scss';
+@import '../../scss//mixins.scss';
+
 .ol-button-group {
   height: 40px;
   border-radius: 4px;
-  width: 100%;
   margin: 0 auto;
   opacity: 1;
   border: none;
-  box-shadow: 0px 8px 16px rgba(46, 58, 91, 0.16);
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-  display: flex;
+  box-shadow: 0px 8px 16px $color-rhodomyrtus_16;
   align-items: center;
-  text-align: center;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
   justify-content: center;
+  background-color: $color-coconut;
+  color: $color-rhodomyrtus;
+  border: 1px solid $color-jicama;
+  @include button_2;
+  span {
+    margin: 0 12px;
+    @include button_2;
+  }
 
-  background-color: #FFF;
-  color: #2E3A5B;
-  border: 1px solid #DBE0E6;
-}
+  .icons {
+    width: 24px;
+    height: 24px;
+    background-color: $color-coconut;
+    position: relative;
+    .icons-content {
+      width: 16px;
+      height: 16px;
+      background: $color-jicama;
+      border: none;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+    }
+    
+  }
 
-.ol-button-group:hover {
-  opacity: 0.85;
-  cursor: pointer;
-  border: 1px solid #8592AB;
-  background: #F4F5F6;
-}
+  &:hover {
+    opacity: 0.85;
+    cursor: pointer;
+    border: 1px solid $color-melon;
+    background: $color-galic;
+  }
 
-.ol-button-group:active {
-  box-shadow: inset 0px 2px 2px rgba(46, 58, 91, 0.16);
-  border: 1px solid #2E3A5B;
-}
-
-.ol-button-group > span {
-  margin: 0 12px;
-}
-
-.ol-icons-content {
-  width: 16px;
-  height: 16px;
-  background: #DBE0E6;
-  border: none;
-  border-radius: 50%;
+  &:active {
+    box-shadow: inset 0px 2px 2px $color-rhodomyrtus_16;
+    border: 1px solid $color-rhodomyrtus;
+  }
 }
