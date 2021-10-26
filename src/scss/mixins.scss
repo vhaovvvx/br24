@@ -1,4 +1,6 @@
-$font-family: Roboto;
+$font-family: 'Roboto', sans-serif;
+$font-family_600w: 'Roboto Slab', serif;
+
 
 //=> Typeface
 @mixin typeface-regular {
@@ -12,7 +14,7 @@ $font-family: Roboto;
 }
 
 @mixin typeface-NBold {
-  font-family: $font-family;
+  font-family: $font-family_600w;
   font-weight: 600;
 }
 
@@ -86,7 +88,7 @@ $font-family: Roboto;
 
 @mixin body_2 {
   @include typeface-regular;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
   letter-spacing: 0;
 }

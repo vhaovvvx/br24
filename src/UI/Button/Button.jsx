@@ -3,11 +3,11 @@ import './Button.scss';
 
 function Button(props) {
 
-  const { bgc, mw, display, order, hanldeClick, disabled }  = props
+  const { bgc, mw, display, order, hanldeClick, disabled, btnTitle }  = props
 
   const activeStyle = {
     backgroundColor: bgc,
-    maxWidth: mw,
+    width: mw,
     display: 'flex'
   }
 
@@ -34,7 +34,7 @@ return (
           <div className='icons' style={icons}>
             <div className='icons-content'></div>
           </div>
-          <span>BUTTON</span>
+          <span>{btnTitle}</span>
       </button>
     </div>
   )

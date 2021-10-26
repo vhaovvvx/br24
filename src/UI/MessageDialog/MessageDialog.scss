@@ -1,0 +1,127 @@
+@import '../../scss//variable.scss';
+@import '../../scss//mixins.scss';
+$lgi-position-top: -41px;
+$smi-position-top: -24px;
+
+@mixin icons {
+  position: absolute;
+  border: none;
+  background-color: #fefefe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .large-icon_content {
+    width: 16px;
+    height: 16px;
+    background-color: $color-jicama;
+    border-radius: 50%;
+  }
+}
+
+.message {
+  .message-dialog {
+    position: absolute;
+    width: 352px;
+    height: 280px;
+    left: calc(50% - 352px/2);
+    top: calc(50% - 280px/2);
+    background: $color-coconut;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 32px 16px 32px 32px;
+
+    h5 {
+      @include heading_5;
+      color: #000000;
+      margin-bottom: 16px;
+    }
+
+    p {
+      @include body_2;
+      color: $color-rhodomyrtus_80;
+    }
+  }
+
+  .message-group {
+    display: flex;
+    margin-top: 52px;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+
+    .link {
+      @include link;
+      color: #2875EA;
+      
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .lg-icon {
+    @include icons;
+    width: 56px;
+    height: 40px;
+    border-radius: 4px;
+  }
+
+  .sm-icon {
+    @include icons;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+//=> large icon position
+
+#lg-tl {
+  top: $lgi-position-top;
+  left: 0;
+}
+
+#lg-bl {
+  bottom: $lgi-position-top;
+  left: 0;
+}
+
+#lg-tr {
+  top: $lgi-position-top;
+  right: 0;
+}
+
+#lg-br {
+  bottom: $lgi-position-top;
+  right: 0;
+}
+
+#lg-tm {
+  top: $lgi-position-top;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+#lg-bm {
+  bottom: $lgi-position-top;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+//=> small icon position
+#sm-tl {
+  top: $smi-position-top;
+  left: 0;
+}
+
+#sm-tr {
+  top: $smi-position-top;
+  right: 0;
+}
+
+#sm-tm {
+  top: $smi-position-top;
+  right: 50%;
+  transform: translateX(50%);
+}

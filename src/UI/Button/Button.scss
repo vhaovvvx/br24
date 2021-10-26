@@ -4,7 +4,6 @@
 .button-group {
   height: 40px;
   border-radius: 4px;
-  width: 100%;
   margin: 0 auto;
   opacity: 1;
   border: none;
@@ -15,6 +14,7 @@
   @include button_2;
   span {
     margin: 0 8px;
+    @include button_2;
   }
 
   .icons {
