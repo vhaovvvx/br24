@@ -1,26 +1,16 @@
 import React from 'react';
 
 function Checkbox(props) {
+  const { disabled } = props;
   return (
     <div>
-      <label class='container' disabled='disabled'>
-        Selected
-        <input type='checkbox' />
-        <span className='checkmark'></span>
-      </label>
-      <label className='container disabled'>
+      <label className={`container ${disabled ? 'disabled' : ''}`}>
         Disabled Selected
-        <input type='checkbox' className='input-disabled' />
-        <span className='checkmark disabled'></span>
-      </label>
-      <label className='container'>
-        Three
-        <input type='checkbox' />
-        <span className='checkmark'></span>
-      </label>
-      <label className='container'>
-        Four
-        <input type='checkbox' />
+        <input
+          type='checkbox'
+          className={disabled && 'input-disabled'}
+          disabled={disabled}
+        />
         <span className='checkmark'></span>
       </label>
     </div>

@@ -3,7 +3,10 @@ import React from 'react';
 function DropdownMenu(props) {
   return (
     <React.Fragment>
-      <div className='dropDownMenu-items' style={{ position: 'relative' }}>
+      <div
+        className='dropDownMenu-items'
+        style={{ position: 'relative', zIndex: '100' }}
+      >
         {props.children}
       </div>
     </React.Fragment>
