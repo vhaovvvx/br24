@@ -1,0 +1,30 @@
+.validation {
+  &:hover:not(.handleValidation) {
+    border: 1px solid var(--Melon);
+  }
+}
+
+.handleValidation {
+  border: 1px solid red;
+}
+
+.spanTest::after {
+  content: attr(data-placeholder);
+  position: absolute;
+  top: 39%;
+  left: 17px;
+  transform: translateY(-50%);
+  font-size: 17px;
+  height: 24px;
+  line-height: 24px;
+  transition: 0.5s;
+  color: #8592ab;
+  z-index: 0;
+  cursor: text;
+}
+
+.focus + .spanTest::after {
+  top: 10px;
+  left: 10px;
+  transition: all 0.5s;
+}

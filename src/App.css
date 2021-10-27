@@ -268,3 +268,8 @@ input:checked ~ .checkmark.radio {
 .test4 {
   padding: 4px;
 }
+
+.recaptcha {
+  align-items: center;
+  text-align: center;
+}
