@@ -1,0 +1,58 @@
+@import '../../scss//variable.scss';
+@import '../../scss//mixins.scss';
+
+.pagination {
+  width: 400px;
+  height: 40px;
+  margin: 50px;
+  border-right: none;
+  border: 1px solid $color-jicama;
+  background-color: $color-coconut;
+  box-sizing: border-box;
+  border-radius: 4px;
+  display:inline-block;
+
+  ul {
+    height: 100%;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+
+    .active {
+      background-color: $color-galic;
+    }
+
+    li {
+      @include body_2;
+      display: flex;
+      width: 40px;
+      align-items: center;
+      justify-content: center;
+      color: $color-rhodomyrtus;
+  
+      &:hover {
+        background-color: $color-galic;
+        cursor: pointer;
+      }
+    }
+
+    li:first-child {
+      &:hover {
+        background-color: $color-coconut;
+      }
+    }
+
+    li:last-child {
+      &:hover {
+        background-color: $color-coconut;
+      }
+    }
+  }
+}
+
+.disabled {
+  pointer-events: none;
+  box-shadow: none;
+  color: #999 !important;
+}

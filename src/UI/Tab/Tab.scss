@@ -1,0 +1,45 @@
+@import '../../scss//variable.scss';
+@import '../../scss//mixins.scss';
+
+@mixin displayFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab {
+  ul {
+    list-style-type: none;
+    height: 40px;
+    @include displayFlex;
+
+    li {
+      width: 98px;
+      height: 100%;
+      @include displayFlex;
+      border: 1px solid $color-jicama;
+      background-color: $color-coconut;
+      @include body_2;
+      color: $color-rhodomyrtus;
+      &:hover {
+        cursor: pointer;
+        background-color: $color-berry;
+        color: $color-coconut;
+      }
+    }
+
+    li:first-child {
+      border-radius: 4px 0px 0px 4px;
+    }
+
+    li:last-child {
+      border-radius: 0px 4px 4px 0px;
+    }
+
+    .active {
+      background-color: $color-berry;
+      color: $color-coconut;
+      border: 1px solid $color-jicama;
+    } 
+  }
+}
