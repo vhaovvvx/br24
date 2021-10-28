@@ -10,17 +10,17 @@ import {
 } from "../../font-icons/icons/Icon";
 
 import { VnFlag, ElFlag, GerFlag } from "../../font-icons/icons/Flags";
+import registerIcon from "../../image/Header/Ic_register.png";
 
 function Header(props) {
   const { cumbs } = props;
-  const [active, setActive] = useState(cumbs[0]);
-
+  // const [active, setActive] = useState(cumbs[0]);
   const country = ["Viet Nam", "England", "German"];
   const flag = [VnFlag, ElFlag, GerFlag];
 
-  const handleSelect = (value) => {
-    setActive(value);
-  };
+  // const handleSelect = (value) => {
+  //   setActive(value);
+  // };
 
   return (
     <div className="header">
@@ -91,7 +91,7 @@ function Header(props) {
             <p>Log in</p>
           </div>
           <div className="header-signup">
-            <SignUpIcon />
+            <img src={registerIcon} alt="register icon" />
             <p>Sign up</p>
           </div>
         </div>
