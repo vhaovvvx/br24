@@ -1,0 +1,14 @@
+@import '../../scss//variable.scss';
+@import '../../scss//mixins.scss';
+
+.tags {
+  display: inline-block;
+  height: 20px;
+  box-sizing: border-box;
+  padding: 2px 10px;
+  border-radius: 2px;
+  border: none;
+  text-align: center;
+  @include caption_3;
+  letter-spacing: 0 !important;
+}
