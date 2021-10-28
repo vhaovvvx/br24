@@ -3,6 +3,7 @@ import Recaptcha from "react-recaptcha";
 import "./App.css";
 import InputValidate from "./components/view/InputValidate/InputValidate";
 import Input from "./UI/Input/Input";
+import Header from "./components/component/Header/Header";
 
 function App() {
   const [data, setData] = useState({
@@ -40,8 +41,11 @@ function App() {
     // console.log(dataResult);
   };
 
+  const cumb = ["Configure", "Transfer settings", "Upload files", "Confirm"];
+
   return (
     <div className="App">
+      <Header cumbs={cumb} />
       <InputValidate
         dataPlaceholder="User Name"
         errorText="Email required"
