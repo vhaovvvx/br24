@@ -1,12 +1,14 @@
 .dropdown-items {
   padding: 10px 40px 10px 16px;
+  display: flex;
+  align-items: center;
 
   color: var(--Rhodomyrtus);
 
   cursor: pointer;
 
   &.active {
-    color:var(--Berry);
+    color: var(--Berry);
   }
   &:hover {
     background-color: var(--Galic);

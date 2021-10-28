@@ -1,18 +1,22 @@
 import React, { useState } from "react";
 import "./Header.scss";
+import ButtonDropdownGroup from "../../view/ButtonDropdownGroup/DropdownGroup";
+
 import {
   ToggleSidebar,
-  UsaFlag,
   SupportIcon,
   SignUpIcon,
   LoginIcon,
-  CardIcon,
-  BreadcrumbIcon,
 } from "../../font-icons/icons/Icon";
+
+import { VnFlag, ElFlag, GerFlag } from "../../font-icons/icons/Flags";
 
 function Header(props) {
   const { cumbs } = props;
   const [active, setActive] = useState(cumbs[0]);
+
+  const country = ["Viet Nam", "England", "German"];
+  const flag = [VnFlag, ElFlag, GerFlag];
 
   const handleSelect = (value) => {
     setActive(value);
@@ -32,8 +36,14 @@ function Header(props) {
         {/* default show */}
         <div className="header-laguage">
           <div className="country-flags">
-            <UsaFlag />
-            <p>English</p>
+            <ButtonDropdownGroup
+              flag={flag[0]}
+              title={country[0]}
+              dataClick={country}
+              maxWidth="75px"
+              border="none"
+            />
+            {/* <p>English</p> */}
           </div>
         </div>
         <div className="header-support">
