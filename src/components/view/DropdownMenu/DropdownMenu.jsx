@@ -1,11 +1,21 @@
 import React from 'react';
+import { defaultProps } from 'react-recaptcha';
+
+DropdownMenu.defaultProps = {
+  maxWidthData: '',
+};
 
 function DropdownMenu(props) {
+  const { maxWidthData } = props;
   return (
     <React.Fragment>
       <div
         className='dropDownMenu-items'
-        style={{ position: 'relative', zIndex: '100' }}
+        style={{
+          position: 'relative',
+          zIndex: '100',
+          maxWidth: `${maxWidthData}px`,
+        }}
       >
         {props.children}
       </div>

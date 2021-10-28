@@ -5,8 +5,12 @@ import DropdownItem from '../DropdownItem/DropdownItem';
 import DropdownMenu from '../DropdownMenu/DropdownMenu';
 import DropdownToggle from '../DropdownToggle/DropdownToggle';
 
+DropdownGroup.defaultProps = {
+  // title: '1',
+};
+
 function DropdownGroup(props) {
-  const { title, sizeIcon, dataClick } = props;
+  const { title, sizeIcon, dataClick, maxWidth } = props;
   const [titleButton, setTitleButton] = useState(title);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -16,15 +20,21 @@ function DropdownGroup(props) {
     setTitleButton(item);
   };
   return (
-    <ButtonDropdown isOpen={dropdownOpen} toggle={toggle}>
+    <ButtonDropdown isOpen={dropdownOpen} toggle={toggle} dataStyle={maxWidth}>
       <DropdownToggle color='red'>
         {titleButton}
         <div className='icon-dropdown'>
           <ArrowDown size={sizeIcon}></ArrowDown>
         </div>
       </DropdownToggle>
-      <div style={dropdownOpen ? { display: 'block' } : { display: 'none' }}>
-        <DropdownMenu>
+      <div
+        style={
+          dropdownOpen
+            ? { display: 'block', background: '#fff' }
+            : { display: 'none', background: '#fff' }
+        }
+      >
+        <DropdownMenu MaxWidthData={maxWidth}>
           <DropdownItem data={dataClick} changeItem={changeItem}></DropdownItem>
         </DropdownMenu>
       </div>

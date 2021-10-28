@@ -11,11 +11,22 @@ ButtonDropdown.propTypes = {
   toggle: PropTypes.func,
 };
 
+ButtonDropdown.defaultProps = {
+  dataStyle: '150',
+};
+
 function ButtonDropdown(props) {
-  const { toggle, isOpen } = props;
+  const { toggle, isOpen, dataStyle } = props;
+
+  const styled = {
+    position: 'relative',
+    width: `${dataStyle}px`,
+    height: '40px',
+  };
+
   return (
     <React.Fragment>
-      <div className='button-dropdown' onClick={toggle}>
+      <div className='button-dropdown' onClick={toggle} style={styled}>
         {isOpen ? props.children : props.children}
         {/* {isOpen ? props.children : props.children[0]} */}
       </div>
