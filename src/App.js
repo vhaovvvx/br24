@@ -1,94 +1,65 @@
 import { useState } from "react";
+import Recaptcha from "react-recaptcha";
 import "./App.css";
-// import DropdownGroup from "./components/view/ButtonDropdownGroup/DropdownGroup";
-// import Recaptcha from 'react-recaptcha';
-// import InputValidate from './components/view/InputValidate/InputValidate';
-// import Input from './UI/Input/Input';
-import Header from "./components/view/Header/Header";
+import InputValidate from "./components/view/InputValidate/InputValidate";
+import Input from "./UI/Input/Input";
 
 function App() {
-  // const [data, setData] = useState({
-  //   isVerified: false,
-  // });
-  // const [dataResult, setDataResult] = useState([]);
+  const [data, setData] = useState({
+    isVerified: false,
+  });
+  const [dataResult, setDataResult] = useState([]);
 
-  // const submit = (e) => {
-  //   if (!data.isVerified) {
-  //     alert('ban chua xac thuc la robot');
-  //     return;
-  //   }
+  const submit = (e) => {
+    if (!data.isVerified) {
+      alert("ban chua xac thuc la robot");
+      return;
+    }
 
-  //   if (data.isVerified) {
-  //     alert('true');
-  //   }
-  // };
+    if (data.isVerified) {
+      alert("true");
+    }
+  };
 
-  // const handleVerifyCallBack = () => {
-  //   setData({ isVerified: true });
-  // };
+  const handleVerifyCallBack = () => {
+    setData({ isVerified: true });
+  };
 
-  // const onLoadCallBack = () => {
-  //   alert('load success');
-  // };
+  const onLoadCallBack = () => {
+    alert("load success");
+  };
 
-  // const handleResult = (data, id) => {
-  //   for (let i = 0; i < id; i++) {
-  //     for (let j = i; j < id; j++) {
-  //       // if (dataResult[i] == dataResult[j]) {
-  //       //   dataResult.push(data, id);
-  //       // }
-  //     }
-  //   }
-  //   // console.log(dataResult);
-  // };
-
-  const cumb = ["Configure", "Transfer settings", "Upload files", "Confirm"];
+  const handleResult = (data, id) => {
+    for (let i = 0; i < id; i++) {
+      for (let j = i; j < id; j++) {
+        // if (dataResult[i] == dataResult[j]) {
+        //   dataResult.push(data, id);
+        // }
+      }
+    }
+    // console.log(dataResult);
+  };
 
   return (
     <div className="App">
-      <Header cumbs={cumb} />
-      {/* <DropdownGroup dataClick={[1, 2, 3, 4, 5]} title="test" sizeIcon="30" /> */}
-      {/* <InputValidate
-        dataPlaceholder='User Name'
-        errorText='Email required'
-        validate='email'
-        min='6'
-        getResult={handleResult}
-        id='1'
-      >
-        test1
-      </InputValidate>
       <InputValidate
-        dataPlaceholder='PassWord'
-        validate='password'
-        typeInput='password'
-      >
-        test2
-      </InputValidate>
-      <InputValidate
-        dataPlaceholder='PassWord2'
-        min='9'
-        errorText='điều kiện nhập chưa thỏa mãn'
-        validate='password and regex'
-        typeInput='password'
-        getResult={handleResult}
-        id='2'
+        dataPlaceholder="User Name"
+        errorText="Email required"
+        validate="email"
+        id="2"
       >
         test3
-      </InputValidate> */}
+      </InputValidate>
       <div className="recaptcha">
         {/* <Recaptcha
           sitekey='6Lcdc_ccAAAAAIMf2ntaDdW_89Egn_8-KchJ5TDi'
           // render='onload'
-          // type='undefined'
-          verifyCallback={handleVerifyCallBack}
-          onloadCallback={onLoadCallBack}
           // type='image'
         /> */}
       </div>
-      {/* <div className='submit' onClick={submit}>
+      <div className="submit" onClick={submit}>
         submit
-      </div> */}
+      </div>
     </div>
   );
 }
