@@ -1,10 +1,6 @@
 import { useState } from 'react';
-import Recaptcha from 'react-recaptcha';
 import './App.css';
 import Login from './components/component/Login.jsx';
-import DropdownGroup from './components/view/ButtonDropdownGroup/DropdownGroup';
-import InputValidate from './components/view/InputValidate/InputValidate';
-import Input from './UI/Input/Input';
 
 function App() {
   const [defaultData, setDefaultData] = useState([

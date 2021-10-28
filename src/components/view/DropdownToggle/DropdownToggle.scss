@@ -1,16 +1,17 @@
 .dropdown-toggle {
   display: flex;
-
   font-size: 14px;
   line-height: 20px;
   text-align: left;
-
   padding: 10px 40px 10px 16px;
   width: 100%;
-
   color: var(--Melon);
   background-color: var(--white);
   border: 1px solid var(--Jicama);
-
   cursor: pointer;
+  align-items: center;
+
+  svg {
+    margin-right: 8px;
+  }
 }
