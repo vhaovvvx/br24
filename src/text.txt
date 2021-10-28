@@ -1,0 +1,43 @@
+{/* <DropdownGroup dataClick={[1, 2, 3, 4, 5, 6]} /> */}
+      {/* <InputValidate
+        dataPlaceholder='User Name'
+        errorText='Email required'
+        validate='email'
+        min='6'
+        getResult={handleResult}
+        id='1'
+      >
+        test1
+      </InputValidate>
+      <InputValidate
+        dataPlaceholder='PassWord'
+        validate='password'
+        typeInput='password'
+      >
+        test2
+      </InputValidate>
+      <InputValidate
+        dataPlaceholder='PassWord2'
+        min='9'
+        errorText='điều kiện nhập chưa thỏa mãn'
+        validate='password and regex'
+        typeInput='password'
+        getResult={handleResult}
+        id='2'
+      >
+        test3
+      </InputValidate> */}
+      <div className='recaptcha'>
+        {/* <Recaptcha
+          sitekey='6Lcdc_ccAAAAAIMf2ntaDdW_89Egn_8-KchJ5TDi'
+          // render='onload'
+          // type='undefined'
+          verifyCallback={handleVerifyCallBack}
+          onloadCallback={onLoadCallBack}
+          // type='image'
+        /> */}
+      </div>
+      <div className='submit' onClick={submit}>
+        submit
+      </div>
+      ,

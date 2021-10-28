@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import './InputValidate.scss';
 import PropTypes from 'prop-types';
+import { defaultProps } from 'react-recaptcha';
 
-InputValidate.propTypes = {
-  id: PropTypes.number,
-};
+InputValidate.defaultProps = {};
 
 function InputValidate(props) {
+  const [result, setResult] = useState(false);
+
   const {
     dataPlaceholder,
     typeInput,
@@ -15,8 +16,20 @@ function InputValidate(props) {
     min,
     getResult,
     id,
+    localtion,
   } = props;
-  const [result, setResult] = useState(false);
+  let top,
+    flat = undefined;
+
+  if (localtion) {
+    if (localtion == 'top') {
+      top = true;
+    } else if (localtion == 'flat') {
+      flat = true;
+    }
+  }
+
+  // console.log(result);
   const [classFocus2, setClassFocus2] = useState('');
   const [errorMessage, setErrorMessage] = useState(
     `Password must be at least ${min} characters`
@@ -36,7 +49,6 @@ function InputValidate(props) {
       return undefined;
     } else {
       setResult(false);
-
       return 'Email Required';
     }
   };
@@ -63,11 +75,15 @@ function InputValidate(props) {
 
   const handleBlur = (e) => {
     const parseId = parseInt(id);
+
     const getTypeValidate = e.target.attributes.dataValidate.value;
+    console.log(getTypeValidate);
     const getValue = e.target.value;
+    console.log(getValue);
     const getClass = e.target.className;
     const value = e.target.value;
     if (getTypeValidate === 'email') {
+      console.log('co vao nha');
       const checkValueRequired = regexEmail(getValue);
       if (checkValueRequired) {
         const obj = {
@@ -116,8 +132,15 @@ function InputValidate(props) {
 
       setClassFocus2('');
     }
+    setResult({ ...result, true: '1' });
     if (getResult) {
-      getResult(result, parseId);
+      // debugger;
+      const data1 = {
+        ...getResult,
+        status: result,
+        id: parseId,
+      };
+      getResult(data1);
     }
   };
 
@@ -126,13 +149,13 @@ function InputValidate(props) {
     display: 'block',
     margin: '10px auto',
     width: '300px',
-    position: 'relative',
   };
   const styleInput = {
     width: '300px',
     height: '56px',
     outline: 'none',
     padding: '16px 48px 16px 16px',
+    position: 'relative',
   };
   const styleErrorMessage = {
     color: 'red',
@@ -141,6 +164,8 @@ function InputValidate(props) {
 
   return (
     <div style={styleInputWrapp}>
+      {top && <div style={styleErrorMessage}>{classStyled.errorMessage} </div>}
+
       <input
         type={typeInput || 'text'}
         style={styleInput}
@@ -155,7 +180,7 @@ function InputValidate(props) {
         className='spanTest'
         htmlFor={id}
       ></label>
-      <div style={styleErrorMessage}>{classStyled.errorMessage} </div>
+      {flat && <div style={styleErrorMessage}>{classStyled.errorMessage} </div>}
     </div>
   );
 }
