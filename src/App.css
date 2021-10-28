@@ -189,6 +189,8 @@ body {
 }
 
 .checkmark {
+  border: 1px solid var(--Melon);
+  background: var(--white);
   position: absolute;
   top: 0;
   left: 0;
@@ -198,8 +200,17 @@ body {
   cursor: pointer;
 }
 
+.checkmark:hover {
+  border: 1px solid var(--Melon);
+  background: var(--Galic);
+}
+
 .checkmark.radio {
   border-radius: 50%;
+}
+
+.container {
+  color: var(--Rhodomyrtus);
 }
 
 .container.disabled {
@@ -250,7 +261,7 @@ input:checked ~ .checkmark.radio {
   display: block;
   position: relative;
   padding-left: 35px;
-  margin-bottom: 12px;
+  /* margin-bottom: 12px; */
   cursor: pointer;
   font-size: 22px;
   -webkit-user-select: none;
@@ -272,4 +283,16 @@ input:checked ~ .checkmark.radio {
 .recaptcha {
   align-items: center;
   text-align: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
 }

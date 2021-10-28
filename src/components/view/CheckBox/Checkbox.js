@@ -1,11 +1,10 @@
 import React from 'react';
 
 function Checkbox(props) {
-  const { disabled } = props;
+  const { disabled ,titleData} = props;
   return (
-    <div>
       <label className={`container ${disabled ? 'disabled' : ''}`}>
-        Disabled Selected
+        {titleData}
         <input
           type='checkbox'
           className={disabled && 'input-disabled'}
@@ -13,7 +12,6 @@ function Checkbox(props) {
         />
         <span className='checkmark'></span>
       </label>
-    </div>
   );
 }
 
