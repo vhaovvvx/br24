@@ -11,7 +11,7 @@
 .spanTest::after {
   content: attr(data-placeholder);
   position: absolute;
-  top: 39%;
+  top: 50%;
   left: 17px;
   transform: translateY(-50%);
   font-size: 17px;

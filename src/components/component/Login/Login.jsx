@@ -1,19 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Login.scss';
-import BgImage from '../image/Login/BackGround.png';
-
-import linkedin from '../font-icons/rootSvg/linkedin.svg';
-import xing from '../font-icons/rootSvg/xing.svg';
-import InputValidate from '../view/InputValidate/InputValidate';
+import linkedin from '../../font-icons/rootSvg/linkedin.svg';
+import xing from '../../font-icons/rootSvg/xing.svg';
+import InputValidate from '../../view/InputValidate/InputValidate';
+import Header from '../Header/Header';
 
 function Login() {
   return (
     <div className='login-container'>
-      <div
-        className='header'
-        style={{ width: '100%', height: '64px', background: 'blue' }}
-      ></div>
+      <Header />
       <div className='login--form'>
         <div className='login--form__title'>
           <h3>Sign in with</h3>
@@ -38,6 +34,7 @@ function Login() {
             errorText='Email Required'
             validate='email'
             localtion='top'
+            id='1'
           />
           <InputValidate
             dataPlaceholder='Password'
@@ -45,6 +42,7 @@ function Login() {
             validate='password'
             min='6'
             localtion='flat'
+            id='2'
           />
         </div>
         <div className='login--form__submit'></div>

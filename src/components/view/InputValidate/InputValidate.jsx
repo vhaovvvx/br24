@@ -147,41 +147,49 @@ function InputValidate(props) {
   const styleInputWrapp = {
     backgroundColor: '#fff',
     display: 'block',
-    margin: '10px auto',
+    margin: '16px auto',
     width: '300px',
+    position: 'relative',
   };
   const styleInput = {
     width: '300px',
     height: '56px',
     outline: 'none',
     padding: '16px 48px 16px 16px',
-    position: 'relative',
   };
   const styleErrorMessage = {
     color: 'red',
     fontSize: '17px',
+    position: 'absolute',
+    top: '-18px',
   };
 
   return (
-    <div style={styleInputWrapp}>
-      {top && <div style={styleErrorMessage}>{classStyled.errorMessage} </div>}
+    <React.Fragment>
+      <div style={styleInputWrapp}>
+        {top && (
+          <div style={styleErrorMessage}>{classStyled.errorMessage} </div>
+        )}
 
-      <input
-        type={typeInput || 'text'}
-        style={styleInput}
-        id={id}
-        onFocus={(e) => handleFocus(e)}
-        onBlur={(e) => handleBlur(e)}
-        className={`validation ${classFocus2} ${classStyled.classValidate}`}
-        dataValidate={validate}
-      />
-      <label
-        data-placeholder={dataPlaceholder}
-        className='spanTest'
-        htmlFor={id}
-      ></label>
-      {flat && <div style={styleErrorMessage}>{classStyled.errorMessage} </div>}
-    </div>
+        <input
+          type={typeInput || 'text'}
+          style={styleInput}
+          id={id}
+          onFocus={(e) => handleFocus(e)}
+          onBlur={(e) => handleBlur(e)}
+          className={`validation ${classFocus2} ${classStyled.classValidate}`}
+          dataValidate={validate}
+        />
+        <label
+          data-placeholder={dataPlaceholder}
+          className='spanTest'
+          htmlFor={id}
+        ></label>
+        {flat && (
+          <div style={styleErrorMessage}>{classStyled.errorMessage} </div>
+        )}
+      </div>
+    </React.Fragment>
   );
 }
 
