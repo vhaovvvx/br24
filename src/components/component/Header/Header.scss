@@ -18,9 +18,9 @@
   background-color: $color-coconut;
   box-shadow: 1px 0px 0px rgba(46, 58, 91, 0.08);
   margin: 0 auto;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
+
   z-index: 1;
 
   .header-left {

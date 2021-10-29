@@ -32,7 +32,7 @@ function Header(props) {
     <div className="header">
       <div className="header-left">
         {/* show menu if user logged in */}
-        {/* <div className="header-menu">
+        <div className="header-menu">
           <div
             className="toggle-sidebar"
             onClick={() => handleToggleSidebar(!toggle)}
@@ -40,7 +40,7 @@ function Header(props) {
             <ToggleSidebar />
           </div>
           <p>Menu</p>
-        </div> */}
+        </div>
 
         {/* default show */}
         <div className="header-laguage">
