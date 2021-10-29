@@ -3,6 +3,8 @@ import './App.css';
 import Login from './components/component/Login/Login';
 import Headers from './components/component/Header/Header';
 import Header from './components/component/Header/Header';
+import Register from './components/component/Register/Register';
+import { BrowserRouter, Link, Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   const [defaultData, setDefaultData] = useState([
@@ -67,9 +69,12 @@ function App() {
   };
 
   return (
-    <div className='App'>
-      <Login />
-    </div>
+    <BrowserRouter>
+      <div className='App'>
+        <Header />
+        <Login></Login>
+      </div>
+    </BrowserRouter>
   );
 }
 
