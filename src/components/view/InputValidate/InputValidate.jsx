@@ -17,6 +17,7 @@ function InputValidate(props) {
     getResult,
     id,
     localtion,
+    widthData,
   } = props;
   let top,
     flat = undefined;
@@ -148,11 +149,14 @@ function InputValidate(props) {
     backgroundColor: '#fff',
     display: 'block',
     margin: '16px auto',
-    width: '300px',
+    width: '100%',
+    maxWidth: `${widthData}px`,
     position: 'relative',
   };
   const styleInput = {
-    width: '300px',
+    width: '100%',
+
+    maxWidth: `${widthData}px`,
     height: '56px',
     outline: 'none',
     padding: '16px 48px 16px 16px',

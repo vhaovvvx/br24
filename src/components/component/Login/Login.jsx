@@ -5,6 +5,11 @@ import linkedin from '../../font-icons/rootSvg/linkedin.svg';
 import xing from '../../font-icons/rootSvg/xing.svg';
 import InputValidate from '../../view/InputValidate/InputValidate';
 import Header from '../Header/Header';
+import { CheckMark, nextStep } from '../../font-icons/icons/Icon';
+import Button from '../../../UI/Button/Button';
+import Checkbox from '../../view/CheckBox/Checkbox';
+import OutLineButton from '../../../UI/Button/OutLineButton';
+import { NextStep } from '../../font-icons/icons/Icon';
 
 function Login() {
   return (
@@ -29,6 +34,7 @@ function Login() {
     min, */}
         <div className='login--form__input'>
           <InputValidate
+            widthData='384'
             dataPlaceholder='Email'
             typeInput='text'
             errorText='Email Required'
@@ -37,6 +43,7 @@ function Login() {
             id='1'
           />
           <InputValidate
+            widthData='384'
             dataPlaceholder='Password'
             typeInput='password'
             validate='password'
@@ -45,8 +52,28 @@ function Login() {
             id='2'
           />
         </div>
-        <div className='login--form__submit'></div>
-        <div className='login--form__signup'></div>
+        <div className='login--form__submit'>
+          <div className='flex justify-center align-center'>
+            <Checkbox titleData='Remember Me' />
+          </div>
+          <Button
+            mw='120px'
+            bgc='#0D004C'
+            display='none'
+            btnTitle='Submit'
+          ></Button>
+        </div>
+        <div className='login--form__signup'>
+          <button href='#' className='signup--account'>
+            REQUEST AN ACCOUNT
+            <div
+              className='login--form__sigup-nextstep'
+              style={{ marginTop: '6px', marginLeft: '8px' }}
+            >
+              <NextStep></NextStep>
+            </div>
+          </button>
+        </div>
       </div>
     </div>
   );

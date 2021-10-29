@@ -1,3 +1,6 @@
+@import '../../../scss/variable.scss';
+@import '../../../scss//mixins.scss';
+
 .login-container {
   position: relative;
   background: url('../../image//Login/BackGround.png') no-repeat;
@@ -21,6 +24,7 @@
   transform: translate(-50%, -50%);
   background-color: #fff;
   &__title {
+    @include body_1;
     font-size: 17px;
     line-height: 24px;
     padding-top: 64px;
@@ -50,14 +54,46 @@
     margin-top: 46px;
   }
   &__submit {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    margin-left: 64px;
+    margin-right: 64px;
   }
   &__signup {
+    margin-top: 64px;
+    margin-left: 124px;
+    margin-right: 124px;
   }
 }
 
 .image-background {
 }
 
-.testImg {
-  font-size: 50px;
+.signup--account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  max-width: 256px;
+  height: 56px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+
+  border: 1px solid var(--white);
+  background-color: var(--white);
+  outline: none;
+  cursor: pointer;
+
+  border-radius: 4px;
+  &:hover {
+    border: 1px solid var(--Melon);
+  }
+  &:active {
+    border: 1px solid var(--Rhodomyrtus);
+  }
 }

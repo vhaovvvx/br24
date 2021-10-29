@@ -15,12 +15,16 @@
   box-sizing: border-box;
   padding: 12px 32px;
   justify-content: space-between;
+<<<<<<< HEAD
   background-color: $color-coconut;
   box-shadow: 1px 0px 0px rgba(46, 58, 91, 0.08);
   margin: 0 auto;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+=======
+  background-color: var(--white);
+>>>>>>> 58dfbc2a6fc781c6514b5ecc4c299281dc477326
 
   .header-left {
     @include displayFlex;
