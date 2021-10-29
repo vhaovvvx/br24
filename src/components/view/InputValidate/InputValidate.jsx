@@ -16,19 +16,11 @@ function InputValidate(props) {
     min,
     getResult,
     id,
-    localtion,
+    location,
     widthData,
   } = props;
-  let top,
-    flat = undefined;
 
-  if (localtion) {
-    if (localtion == 'top') {
-      top = true;
-    } else if (localtion == 'flat') {
-      flat = true;
-    }
-  }
+  console.log(location);
 
   // console.log(result);
   const [classFocus2, setClassFocus2] = useState('');
@@ -75,52 +67,56 @@ function InputValidate(props) {
   };
 
   const handleBlur = (e) => {
+    let getTypeValidate = undefined;
+
     const parseId = parseInt(id);
 
-    const getTypeValidate = e.target.attributes.dataValidate.value;
     console.log(getTypeValidate);
     const getValue = e.target.value;
     console.log(getValue);
     const getClass = e.target.className;
     const value = e.target.value;
-    if (getTypeValidate === 'email') {
-      console.log('co vao nha');
-      const checkValueRequired = regexEmail(getValue);
-      if (checkValueRequired) {
-        const obj = {
-          ...classStyled,
-          errorMessage: checkValueRequired,
-          classValidate: 'handleValidation',
-        };
-        setClassStyled(obj);
-      } else {
-        const obj = { ...classStyled, errorMessage: checkValueRequired };
-        setClassStyled(obj);
-      }
-    } else if (getTypeValidate === 'password') {
-      const checkValueRequired = validatePassword(getValue);
-      if (checkValueRequired) {
-        const obj = {
-          ...classStyled,
-          errorMessage: checkValueRequired,
-          classValidate: 'handleValidation',
-        };
-        setClassStyled(obj);
-      } else {
-        const obj = { ...classStyled, errorMessage: '' };
-        setClassStyled(obj);
-      }
-    } else if (getTypeValidate === 'password and regex') {
-      const getRegexEmailValue = regexEmail(getValue);
-      const getValueValidation = validatePassword(getValue);
+    if (value) {
+      getTypeValidate = e.target.attributes('data-validate').value;
+      if (getTypeValidate === 'email') {
+        console.log('co vao nha');
+        const checkValueRequired = regexEmail(getValue);
+        if (checkValueRequired) {
+          const obj = {
+            ...classStyled,
+            errorMessage: checkValueRequired,
+            classValidate: 'handleValidation',
+          };
+          setClassStyled(obj);
+        } else {
+          const obj = { ...classStyled, errorMessage: checkValueRequired };
+          setClassStyled(obj);
+        }
+      } else if (getTypeValidate === 'password') {
+        const checkValueRequired = validatePassword(getValue);
+        if (checkValueRequired) {
+          const obj = {
+            ...classStyled,
+            errorMessage: checkValueRequired,
+            classValidate: 'handleValidation',
+          };
+          setClassStyled(obj);
+        } else {
+          const obj = { ...classStyled, errorMessage: '' };
+          setClassStyled(obj);
+        }
+      } else if (getTypeValidate === 'password and regex') {
+        const getRegexEmailValue = regexEmail(getValue);
+        const getValueValidation = validatePassword(getValue);
 
-      if (getRegexEmailValue || getValueValidation) {
-        const obj = {
-          ...classStyled,
-          errorMessage: errorText,
-          classValidate: 'handleValidation',
-        };
-        setClassStyled(obj);
+        if (getRegexEmailValue || getValueValidation) {
+          const obj = {
+            ...classStyled,
+            errorMessage: errorText,
+            classValidate: 'handleValidation',
+          };
+          setClassStyled(obj);
+        }
       }
     }
 
@@ -155,7 +151,10 @@ function InputValidate(props) {
   };
   const styleInput = {
     width: '100%',
+    border: '1px solid #DBE0E6',
 
+    boxShadow: '0px 1px 3px rgba(46, 58, 91, 0.08)',
+    borderRadius: '4px',
     maxWidth: `${widthData}px`,
     height: '56px',
     outline: 'none',
@@ -165,16 +164,16 @@ function InputValidate(props) {
     color: 'red',
     fontSize: '17px',
     position: 'absolute',
-    top: '-18px',
   };
 
   return (
     <React.Fragment>
       <div style={styleInputWrapp}>
-        {top && (
-          <div style={styleErrorMessage}>{classStyled.errorMessage} </div>
+        {location === 'top' && (
+          <div style={styleErrorMessage} className='location-top'>
+            {classStyled.errorMessage}{' '}
+          </div>
         )}
-
         <input
           type={typeInput || 'text'}
           style={styleInput}
@@ -182,15 +181,23 @@ function InputValidate(props) {
           onFocus={(e) => handleFocus(e)}
           onBlur={(e) => handleBlur(e)}
           className={`validation ${classFocus2} ${classStyled.classValidate}`}
-          dataValidate={validate}
+          data-validate={validate}
         />
         <label
           data-placeholder={dataPlaceholder}
           className='spanTest'
           htmlFor={id}
         ></label>
-        {flat && (
-          <div style={styleErrorMessage}>{classStyled.errorMessage} </div>
+        {location === 'down' && (
+          <div style={styleErrorMessage} className='location-down'>
+            {classStyled.errorMessage}{' '}
+          </div>
+        )}
+
+        {location === 'flat' && (
+          <div style={styleErrorMessage} className='location-flat'>
+            {classStyled.errorMessage}{' '}
+          </div>
         )}
       </div>
     </React.Fragment>

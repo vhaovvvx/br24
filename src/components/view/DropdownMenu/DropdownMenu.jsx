@@ -1,5 +1,6 @@
 import React from 'react';
 import { defaultProps } from 'react-recaptcha';
+import './DropdownMenu.scss';
 
 DropdownMenu.defaultProps = {
   maxWidthData: '',

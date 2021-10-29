@@ -3,12 +3,12 @@
 
 .login-container {
   position: relative;
-  background: url('../../image//Login/BackGround.png') no-repeat;
-  background-position: center;
-  background-size: 100%;
+  background: url('../../image/Login/BackGround.png') no-repeat;
+  background-size: cover;
+  background-position: top center;
   width: 100%;
   height: 100vh;
-  //   height: 100vh;
+  overflow: auto;
 }
 
 .login--form {
@@ -31,25 +31,7 @@
     text-align: center;
     color: var(--Rhodomyrtus);
   }
-  &__signwith {
-    display: flex;
-    padding-top: 32px;
-    justify-content: center;
-    flex-grow: 16px;
-
-    .signwith {
-      width: 56px;
-      height: 56px;
-      border: 1px solid var(--Jicama);
-      padding: 16px;
-      &:hover {
-        opacity: 0.7;
-      }
-    }
-    .linkedin {
-      margin-right: 16px;
-    }
-  }
+  
   &__input {
     margin-top: 46px;
   }
@@ -95,5 +77,30 @@
   }
   &:active {
     border: 1px solid var(--Rhodomyrtus);
+  }
+}
+
+.form--wrapp {
+  position: relative;
+  &__foggot-password {
+    position: absolute;
+    right: 16%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: blue;
+  }
+}
+
+.bottom--group {
+  @include body_2;
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  display: -webkit-inline-box;
+  transform: translateX(-50%);
+  color: #fff;
+  &__items {
+    padding: 0 16px;
   }
 }
