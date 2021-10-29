@@ -13,8 +13,9 @@ import { VnFlag, ElFlag, GerFlag } from "../../font-icons/icons/Flags";
 import registerIcon from "../../image/Header/Ic_register.png";
 
 function Header(props) {
-  const { cumbs } = props;
+  const { cumbs, toogleSidebar } = props;
   // const [active, setActive] = useState(cumbs[0]);
+  const [toggle, setToggle] = useState(true);
   const country = ["Viet Nam", "England", "German"];
   const flag = [VnFlag, ElFlag, GerFlag];
 
@@ -22,16 +23,24 @@ function Header(props) {
   //   setActive(value);
   // };
 
+  const handleToggleSidebar = (value) => {
+    setToggle(value);
+    toogleSidebar(value);
+  };
+
   return (
     <div className="header">
       <div className="header-left">
         {/* show menu if user logged in */}
-        {/* <div className="header-menu">
-          <div className="toggle-sidebar">
+        <div className="header-menu">
+          <div
+            className="toggle-sidebar"
+            onClick={() => handleToggleSidebar(!toggle)}
+          >
             <ToggleSidebar />
           </div>
           <p>Menu</p>
-        </div> */}
+        </div>
 
         {/* default show */}
         <div className="header-laguage">

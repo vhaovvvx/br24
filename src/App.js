@@ -1,21 +1,21 @@
-import { useState } from 'react';
-import './App.css';
-import Login from './components/component/Login/Login';
-import Headers from './components/component/Header/Header';
-import Header from './components/component/Header/Header';
+import { useState } from "react";
+import "./App.css";
+import Login from "./components/component/Login/Login";
+import Headers from "./components/component/Header/Header";
+import Header from "./components/component/Header/Header";
 
 function App() {
   const [defaultData, setDefaultData] = useState([
     {
-      name: 'test1',
+      name: "test1",
       id: 1,
     },
     {
-      name: 'test2',
+      name: "test2",
       id: 2,
     },
     {
-      name: 'test3',
+      name: "test3",
       id: 3,
     },
   ]);
@@ -44,12 +44,12 @@ function App() {
 
     // setDataResult([]);
     if (!data.isVerified) {
-      alert('ban chua xac thuc la robot');
+      alert("ban chua xac thuc la robot");
       return;
     }
 
     if (data.isVerified) {
-      alert('true');
+      alert("true");
     }
   };
 
@@ -58,7 +58,7 @@ function App() {
   };
 
   const onLoadCallBack = () => {
-    alert('load success');
+    alert("load success");
   };
 
   const handleResult = (data) => {
@@ -67,8 +67,7 @@ function App() {
   };
 
   return (
-    <div className='App'>
-      <Header />
+    <div className="App">
       <Login />
     </div>
   );

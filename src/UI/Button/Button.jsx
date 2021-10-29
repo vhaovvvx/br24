@@ -1,43 +1,40 @@
-import React from 'react';
-import './Button.scss';
+import React from "react";
+import "./Button.scss";
 
 function Button(props) {
-
-  const { bgc, mw, display, order, hanldeClick, disabled, btnTitle }  = props
+  const { bgc, display, order, hanldeClick, disabled, btnTitle } = props;
 
   const activeStyle = {
     backgroundColor: bgc,
-    width: mw,
-    display: 'flex'
-  }
+    display: "flex",
+  };
 
   const icons = {
     display: display,
-    order: order
-  }
+    order: order,
+  };
 
   const disabledStyle = {
-    maxWidth: mw,
     backgroundColor: "#F4F5F6",
     cursor: "not-allowed",
     color: "DBE0E6",
-    boxShadow: "none"
-  }
+    boxShadow: "none",
+  };
 
-return (
-    <div className='buttons'>
-      <button 
-        className='button-group' 
+  return (
+    <div className="buttons">
+      <button
+        className="button-group"
         style={disabled ? disabledStyle : activeStyle}
         onClick={hanldeClick}
-        >
-          <div className='icons' style={icons}>
-            <div className='icons-content'></div>
-          </div>
-          <span>{btnTitle}</span>
+      >
+        <div className="icons" style={icons}>
+          <div className="icons-content"></div>
+        </div>
+        <span>{btnTitle}</span>
       </button>
     </div>
-  )
+  );
 }
 
-export default Button
+export default Button;

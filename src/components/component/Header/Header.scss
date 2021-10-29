@@ -1,5 +1,5 @@
-@import '../../../scss/variable.scss';
-@import '../../../scss//mixins.scss';
+@import "../../../scss/variable.scss";
+@import "../../../scss//mixins.scss";
 
 @mixin displayFlex {
   display: flex;
@@ -9,12 +9,18 @@
 .header {
   max-width: 1920px;
   width: 100%;
-  height: 64px;
+  max-height: 64px;
+  height: auto;
   @include displayFlex;
-  border: 1px solid black;
   box-sizing: border-box;
-  padding: 0 32px;
+  padding: 12px 32px;
   justify-content: space-between;
+  background-color: $color-coconut;
+  box-shadow: 1px 0px 0px rgba(46, 58, 91, 0.08);
+  margin: 0 auto;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 
   .header-left {
     @include displayFlex;
@@ -24,7 +30,7 @@
         cursor: pointer;
       }
 
-      margin-right: 32px;
+      margin-right: 16px;
 
       p {
         @include body_2;

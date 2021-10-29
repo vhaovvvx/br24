@@ -111,7 +111,7 @@ q:before,
 q:after,
 blockquote:before,
 blockquote:after {
-  content: '';
+  content: "";
   content: none;
 }
 /* button {
@@ -140,8 +140,7 @@ section,
 summary {
   display: block;
 }
-body {
-}
+
 * {
   padding: 0;
   margin: 0;
@@ -161,11 +160,6 @@ body {
   --Plum: #0d004c;
 }
 
-.App {
-  /* display: flex;
-  flex-direction: column; */
-}
-
 .fas .fa-arrow-down {
   font-size: 10px;
 }
@@ -177,10 +171,10 @@ body {
   transform: translateY(-50%);
 }
 
-[type='checkbox']:checked,
-[type='radio'],
-[type='radio']:not(:checked),
-[type='checkbox']:not(:checked) {
+[type="checkbox"]:checked,
+[type="radio"],
+[type="radio"]:not(:checked),
+[type="checkbox"]:not(:checked) {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -237,7 +231,7 @@ input:checked ~ .checkmark.radio {
 
 .checkmark:after,
 .checkmark.radio:after {
-  content: '';
+  content: "";
   position: absolute;
   display: none;
 }
