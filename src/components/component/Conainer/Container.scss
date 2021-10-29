@@ -1,0 +1,11 @@
+@import "../../../scss/variable.scss";
+@import "../../../scss//mixins.scss";
+
+.main-container {
+  max-width: 1920px;
+  width: 100%;
+  background-color: $color-galic;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+}

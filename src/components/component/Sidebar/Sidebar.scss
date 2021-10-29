@@ -1,0 +1,111 @@
+@import "../../../scss/variable.scss";
+@import "../../../scss//mixins.scss";
+
+.sidebar {
+  max-width: 240px;
+  width: 100%;
+  max-height: 896px;
+  transition: max-width 0.4s;
+  height: auto;
+  flex-wrap: wrap;
+  background-color: $color-coconut;
+  box-sizing: border-box;
+  padding: 16px 0 32px 0px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 64px;
+
+  ul {
+    width: 100%;
+    display: block;
+    .active {
+      background-color: $color-galic;
+    }
+    li {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 16px 0 16px 32px;
+      a {
+        @include body_1;
+        color: $color-rhodomyrtus;
+      }
+
+      &:hover {
+        background-color: $color-galic;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .about-us {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 0 0 32px;
+    position: absolute;
+    bottom: 32px;
+    .bm {
+      margin-bottom: 32px;
+      p {
+        margin: 8px 0;
+        @include body_2;
+        color: $color-wood_apple;
+      }
+    }
+
+    .social-logo {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+      img {
+        margin-right: 18px;
+      }
+    }
+
+    .develop {
+      p {
+        @include body_2;
+      }
+    }
+  }
+}
+
+.sidebar-hide {
+  max-width: 0px;
+  width: 100%;
+  transition: max-width 0.4s;
+
+  ul {
+    display: none;
+  }
+
+  .about-us {
+    display: none;
+  }
+}
+
+@mixin leftbar {
+  max-width: 240px;
+  width: 100%;
+  height: 896px;
+  background-color: $color-coconut;
+  box-shadow: 1px 0px 0px rgba(46, 58, 91, 0.08);
+
+  p {
+    margin-top: 80px;
+    margin-left: 32px;
+    @include body_1;
+  }
+}
+
+.leftbar {
+  margin-left: 8px;
+  @include leftbar;
+}
+
+.leftbar-nm {
+  margin: 0;
+  @include leftbar;
+}

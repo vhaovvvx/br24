@@ -113,7 +113,7 @@ q:before,
 q:after,
 blockquote:before,
 blockquote:after {
-  content: '';
+  content: "";
   content: none;
 }
 /* button {
@@ -142,8 +142,7 @@ section,
 summary {
   display: block;
 }
-body {
-}
+
 * {
   font-family: 'Roboto', 'sans-serif';
   padding: 0;
@@ -181,10 +180,10 @@ body {
   transform: translateY(-50%);
 }
 
-[type='checkbox']:checked,
-[type='radio'],
-[type='radio']:not(:checked),
-[type='checkbox']:not(:checked) {
+[type="checkbox"]:checked,
+[type="radio"],
+[type="radio"]:not(:checked),
+[type="checkbox"]:not(:checked) {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -252,7 +251,7 @@ input:checked ~ .checkmark.radio {
 
 .checkmark:after,
 .checkmark.radio:after {
-  content: '';
+  content: "";
   position: absolute;
   display: none;
 }

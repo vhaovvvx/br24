@@ -9,15 +9,15 @@ import { BrowserRouter, Link, Router, Route, Switch } from 'react-router-dom';
 function App() {
   const [defaultData, setDefaultData] = useState([
     {
-      name: 'test1',
+      name: "test1",
       id: 1,
     },
     {
-      name: 'test2',
+      name: "test2",
       id: 2,
     },
     {
-      name: 'test3',
+      name: "test3",
       id: 3,
     },
   ]);
@@ -46,12 +46,12 @@ function App() {
 
     // setDataResult([]);
     if (!data.isVerified) {
-      alert('ban chua xac thuc la robot');
+      alert("ban chua xac thuc la robot");
       return;
     }
 
     if (data.isVerified) {
-      alert('true');
+      alert("true");
     }
   };
 
@@ -60,7 +60,7 @@ function App() {
   };
 
   const onLoadCallBack = () => {
-    alert('load success');
+    alert("load success");
   };
 
   const handleResult = (data) => {
